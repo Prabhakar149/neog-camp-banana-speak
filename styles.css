@@ -34,6 +34,7 @@ textarea::placeholder{
     right: 10.8rem;
     background-color: var(--primary-color);
     border-style: none;
+    border-radius: 0.5rem;
     width: 20%;
     padding: 1.5rem;
     font-size: larger;
@@ -43,7 +44,7 @@ textarea::placeholder{
     cursor: pointer;
     background-color: rgb(164, 68, 202)
 }
-p{
+.message-para{
     position: relative;
     right: 13rem;
     font-size: large;
@@ -51,7 +52,8 @@ p{
 }
 #output-text{
   width: 46.5%;
-  height: 15vh;
+  min-height: 15vh;
+  height: auto;
   border: 1px solid black;
   position: relative;
   left: 23.3rem;
@@ -61,9 +63,8 @@ p{
 }
 .footer{
   background-color: var(--primary-color);
-  /* padding: 1rem; */
-  /* margin-bottom: 3.5rem; */
-  height: 5.5rem;
+  min-height: 5.5rem;
+  height: auto;
   text-align: center;
   margin: 0;
 }
@@ -75,4 +76,42 @@ p{
   left: 1rem;
   top: -0.5rem;
   font-size: medium;
+}
+
+/* for small devices */
+
+@media (max-width: 900px){
+  #btn-input{
+    right: 0rem;
+    top: -1rem;
+    width: 30%;
+    padding: 0.5rem;
+    font-size: large;
+  }
+  .message-para{
+    right: -0.5rem;
+    top: -1rem;
+  }
+  #output-text{
+    left: 8rem;
+  }
+}
+
+/* for extra small devices */
+
+@media (max-width: 360px){
+  #btn-input{
+    right: 0rem;
+    top: -1rem;
+    width: 30%;
+    padding: 0.5rem;
+    font-size: large;
+  }
+  .message-para{
+    right: -0.5rem;
+    top: -1rem;
+  }
+  #output-text{
+    left: 6rem;
+  }
 }
